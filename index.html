@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício HTML e JS</title>
+</head>
+<body>
+    <header>
+        <h1>Formulário HTML</h1>
+    </header>
+    <section>
+        <h2>Digite os valores abaixo:</h2>
+        <div>
+            <input id="campoA" type="number" required placeholder="Campo (A)">
+            <input id="campoB" type="number" required placeholder="Campo (B)">
+            <button type="button" onclick="validarCampos()">Validar</button>
+            <button type="reset">Apagar</button>
+        </div>
+    </section>
+    <script>
+        function validarCampos() {
+            const campoA = Number (document.getElementById('campoA').value);
+            const campoB = Number (document.getElementById('campoB').value);
+            if (campoB > campoA) { 
+                alert('Parabéns!!! o CampoB é maior que o CampoA');
+            } else {
+                alert('O campoB deve ser maior que o campoA, tente de novo!');  
+            }
+        }
+    </script>
+</body>
+</html>
